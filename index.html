@@ -1,12 +1,85 @@
 <!DOCTYPE html>
-<html>
+<html class="bg-black">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
-    <h1 class="text-3xl font-bold underline">Hello world!</h1>
+    <header class="p-4">
+      <h1
+        class="text-3xl font-bold bg-red-900 text-center p-8 text-black rounded-3xl text-white"
+      >
+        Waystone
+      </h1>
+    </header>
+
+    <main>
+      <section class="p-4">
+        <p
+          class="text-white font-bold bg-red-900 text-center p-8 text-black rounded-3xl"
+        >
+          Welcome to the Waystone. To get started, please design your character.
+        </p>
+      </section>
+      <section class="p-4">
+        <form
+          id="character-creation-form"
+          class="md:max-w-[50%] mx-auto bg-zinc-900 rounded-lg p-5"
+        >
+          <div id="inputs" class="grid sm:grid-cols-1 md:grid-cols-2">
+            <div class="p-4">
+              <div class="mb-6 w-auto">
+                <input
+                  id="name"
+                  class="border text-gray-900 text-sm rounded-lg block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
+                  placeholder="Name"
+                  required
+                />
+              </div>
+              <div class="mb-6">
+                <textarea
+                  id="background"
+                  class="border text-gray-900 text-sm rounded-lg block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
+                  placeholder="Background"
+                ></textarea>
+              </div>
+            </div>
+            <div class="p-4">
+              <div
+                class="mb-6 border text-gray-900 text-sm rounded-lg p-2.5 bg-gray-700 border-gray-600 text-white text-center"
+              >
+                <p class="inline">Points Available:</p>
+                <p id="point-counter" class="inline">0</p>
+              </div>
+              <div class="mb-6">
+                <div
+                  class="flex items-center mb-6 border text-gray-900 text-sm rounded-lg block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
+                >
+                  <p class="justify-center text-white inline-block mr-3">
+                    Strength:
+                  </p>
+                  <input
+                    id="Strength"
+                    type="number"
+                    class="border text-gray-900 text-sm rounded-lg block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
+                    placeholder="Strength"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="flex items-center justify-center">
+            <button
+              type="submit"
+              class="text-white bg-red-900 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5"
+            >
+              Submit
+            </button>
+          </div>
+        </form>
+      </section>
+    </main>
     <script src="./build/index.js"></script>
   </body>
 </html>
