@@ -50,6 +50,12 @@ class Character {
     }
 }
 
+const characterFromLocalStorage = localStorage.getItem('character')
+if (characterFromLocalStorage) {
+    console.log("CHARACTER FROM LOCAL STORAGE: ", characterFromLocalStorage)
+    location.href = './src/pages/camp.html'
+}
+
 const playerCharacter = new Character('FNU LNU')
 
 characterCreationForm.addEventListener('submit', (event: SubmitEvent) => {
@@ -57,6 +63,9 @@ characterCreationForm.addEventListener('submit', (event: SubmitEvent) => {
     playerCharacter.name = characterNameInput.value
     playerCharacter.background = backgroundInput.value
     console.log("CREATED: ", playerCharacter)
+    localStorage.setItem('character', JSON.stringify(playerCharacter))
+    // save the character to local storage
+    location.href = './src/pages/camp.html'
 })
 
 hydrateStatRadialInputs("strength")
