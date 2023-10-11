@@ -31,7 +31,7 @@
             <div class="p-4">
               <div class="mb-6 w-auto">
                 <input
-                  id="name"
+                  id="character-name-input"
                   class="border text-gray-900 text-sm rounded-lg block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
                   placeholder="Name"
                   required
@@ -50,21 +50,75 @@
                 class="mb-6 border text-gray-900 text-sm rounded-lg p-2.5 bg-gray-700 border-gray-600 text-white text-center"
               >
                 <p class="inline">Points Available:</p>
-                <p id="point-counter" class="inline">0</p>
+                <p id="available-points-counter" class="inline">1</p>
               </div>
               <div class="mb-6">
                 <div
-                  class="flex items-center mb-6 border text-gray-900 text-sm rounded-lg block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
+                  class="flex items-center justify-around mb-6 border text-gray-900 text-sm rounded-lg block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
                 >
                   <p class="justify-center text-white inline-block mr-3">
                     Strength:
                   </p>
-                  <input
-                    id="Strength"
-                    type="number"
-                    class="border text-gray-900 text-sm rounded-lg block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
-                    placeholder="Strength"
-                  />
+
+                  <button
+                    id="strength-decrement"
+                    class="bg-gray-600 px-2 rounded"
+                  >
+                    -
+                  </button>
+                  <p id="strength-counter" class="inline-block mx-3">1</p>
+                  <button
+                    id="strength-increment"
+                    class="bg-gray-600 px-2 rounded"
+                  >
+                    +
+                  </button>
+                </div>
+              </div>
+              <div class="mb-6">
+                <div
+                  class="flex items-center justify-around mb-6 border text-gray-900 text-sm rounded-lg block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
+                >
+                  <p class="justify-center text-white inline-block mr-3">
+                    Dexterity:
+                  </p>
+
+                  <button
+                    id="dexterity-decrement"
+                    class="bg-gray-600 px-2 rounded"
+                  >
+                    -
+                  </button>
+                  <p id="dexterity-counter" class="inline-block mx-3">1</p>
+                  <button
+                    id="dexterity-increment"
+                    class="bg-gray-600 px-2 rounded"
+                  >
+                    +
+                  </button>
+                </div>
+              </div>
+              <div class="mb-6">
+                <div
+                  class="flex items-center justify-around mb-6 border text-gray-900 text-sm rounded-lg block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
+                >
+                  <p class="justify-center text-white inline-block mr-3">
+                    Constitution:
+                  </p>
+
+                  <button
+                    id="constitution-decrement"
+                    class="bg-gray-600 px-2 rounded"
+                  >
+                    -
+                  </button>
+                  <p id="constitution-counter" class="inline-block mx-3">1</p>
+                  <button
+                    id="constitution-increment"
+                    class="bg-gray-600 px-2 rounded"
+                  >
+                    +
+                  </button>
                 </div>
               </div>
             </div>
