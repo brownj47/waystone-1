@@ -1,6 +1,7 @@
 "use strict";
 const characterCreationForm = document.querySelector('#character-creation-form');
 const characterNameInput = document.querySelector('#character-name-input');
+const backgroundInput = document.querySelector('#background-input');
 const availablePointsCounter = document.querySelector('#available-points-counter');
 class Character {
     constructor(name, background = 'none', strength = 1, dexterity = 1, constitution = 1, availablePoints = 1) {
@@ -49,8 +50,12 @@ const playerCharacter = new Character('FNU LNU');
 characterCreationForm.addEventListener('submit', (event) => {
     event.preventDefault();
     playerCharacter.name = characterNameInput.value;
+    playerCharacter.background = backgroundInput.value;
     console.log("CREATED: ", playerCharacter);
 });
+hydrateStatRadialInputs("strength");
+hydrateStatRadialInputs("dexterity");
+hydrateStatRadialInputs("constitution");
 function hydrateStatRadialInputs(statName) {
     const incrementBtn = document.querySelector(`#${statName}-increment`);
     const decrementBtn = document.querySelector(`#${statName}-decrement`);
@@ -63,7 +68,4 @@ function hydrateStatRadialInputs(statName) {
         playerCharacter.decrementStat(statName);
     });
 }
-hydrateStatRadialInputs("strength");
-hydrateStatRadialInputs("dexterity");
-hydrateStatRadialInputs("constitution");
 // when the user types, if the number is between 1 and 5, update the character's strength

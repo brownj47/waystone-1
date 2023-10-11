@@ -1,5 +1,6 @@
 const characterCreationForm = document.querySelector('#character-creation-form') as HTMLFormElement
 const characterNameInput = document.querySelector('#character-name-input') as HTMLInputElement
+const backgroundInput = document.querySelector('#background-input') as HTMLInputElement
 const availablePointsCounter = document.querySelector('#available-points-counter') as Element
 
 class Character {
@@ -54,6 +55,7 @@ const playerCharacter = new Character('FNU LNU')
 characterCreationForm.addEventListener('submit', (event: SubmitEvent) => {
     event.preventDefault()
     playerCharacter.name = characterNameInput.value
+    playerCharacter.background = backgroundInput.value
     console.log("CREATED: ", playerCharacter)
 })
 
