@@ -57,6 +57,10 @@ characterCreationForm.addEventListener('submit', (event: SubmitEvent) => {
     console.log("CREATED: ", playerCharacter)
 })
 
+hydrateStatRadialInputs("strength")
+hydrateStatRadialInputs("dexterity")
+hydrateStatRadialInputs("constitution")
+
 function hydrateStatRadialInputs(statName: string) {
     const incrementBtn = document.querySelector(`#${statName}-increment`) as Element
     const decrementBtn = document.querySelector(`#${statName}-decrement`) as Element
@@ -71,11 +75,6 @@ function hydrateStatRadialInputs(statName: string) {
         playerCharacter.decrementStat(statName)
     })
 }
-
-hydrateStatRadialInputs("strength")
-hydrateStatRadialInputs("dexterity")
-hydrateStatRadialInputs("constitution")
-
 
 
 // when the user types, if the number is between 1 and 5, update the character's strength
